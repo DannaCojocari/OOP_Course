@@ -1,1 +1,31 @@
-HELLO WORLD
+{
+  "data": [
+    {
+      "id": 0,
+      "isHumanoid": false,
+      "planet": "Kashyyyk",
+      "age": 253,
+      "traits": [
+        "HAIRY",
+        "TALL"
+      ]
+    },
+    {
+      "id": 1,
+      "isHumanoid": true,
+      "planet": "Betelgeuse",
+      "age": 59,
+      "traits": [
+        "EXTRA_ARMS",
+        "EXTRA_HEAD"
+      ]
+    },
+    {
+      "id": 2,
+      "isHumanoid": false,
+      "traits": [
+        "BULKY"
+      ]
+    }
+  ]
+}

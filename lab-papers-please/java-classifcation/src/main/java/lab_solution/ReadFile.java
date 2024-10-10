@@ -1,16 +1,22 @@
 package lab_solution;
 import java.io.FileReader;
 import java.io.IOException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class ReadFile {
     public static void read(String path) throws IOException
     {
-        FileReader data = new FileReader(path);
+        // ObjectMapper instance - JSON parsing
+        ObjectMapper mapper = new ObjectMapper();
 
-        int i;
-        while ((i = data.read()) != -1) //keep reading until eof
-            System.out.print((char)i);
+        // parsing the file into a JsonNode object
+        FileReader file = new FileReader(path);
+        JsonNode data = mapper.readTree(file).get("data");
 
-        data.close();
+        //printing each json object separately
+        for (JsonNode entry : data) {
+            System.out.println(entry.toPrettyString());
+        }
     }
 }
