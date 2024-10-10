@@ -1,18 +1,10 @@
 {
   "data": [
     {
-      "id": 0,
-      "isHumanoid": false,
-      "planet": "Kashyyyk",
-      "age": 253,
-      "traits": [
-        "HAIRY",
-        "TALL"
-      ]
     },
     {
       "id": 1,
-      "isHumanoid": true,
+      "humanoid": true,
       "planet": "Betelgeuse",
       "age": 59,
       "traits": [
@@ -22,7 +14,7 @@
     },
     {
       "id": 2,
-      "isHumanoid": false,
+      "humanoid": false,
       "traits": [
         "BULKY"
       ]

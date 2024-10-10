@@ -40,7 +40,7 @@ public class Person {
         return id;
     }
 
-    public boolean getHumaoid() {
+    public boolean getHumanoid() {
         return humanoid;
     }
 
@@ -62,8 +62,12 @@ public class Person {
         System.out.println("Planet: " + planet);
         System.out.println("Age: " + age);
         System.out.print("Traits: ");
-        for (String trait : traits) {
-            System.out.print(trait + " ");
+        if (traits != null) {
+            for (String trait : traits) {
+                System.out.print(trait + " ");
+            }
+        } else {
+            System.out.print("null");
         }
         System.out.println();
     }
