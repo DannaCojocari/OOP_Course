@@ -12,8 +12,7 @@ public class ReadFile {
 
         // parsing the file into a JsonNode object
         FileReader file = new FileReader(path);
-        JsonNode data = mapper.readTree(file).get("data");
 
-        return data;
+        return mapper.readTree(file).get("data");
     }
 }

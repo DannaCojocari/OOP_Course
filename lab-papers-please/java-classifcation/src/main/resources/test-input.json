@@ -2,7 +2,7 @@
   "data": [
     {
       "id": 0,
-      "isHumanoid": true,
+      "humanoid": true,
       "planet": "Asgard",
       "age": 2034,
       "traits": [
@@ -12,13 +12,13 @@
     },
     {
       "id": 1,
-      "isHumanoid": false,
+      "humanoid": false,
       "planet": "Endor",
       "age": 22
     },
     {
       "id": 2,
-      "isHumanoid": false,
+      "humanoid": false,
       "age": 128,
       "traits": [
         "GREEN"
@@ -26,7 +26,7 @@
     },
     {
       "id": 3,
-      "isHumanoid": true,
+      "humanoid": true,
       "age": 7523
     },
     {
@@ -38,7 +38,7 @@
     },
     {
       "id": 5,
-      "isHumanoid": false,
+      "humanoid": false,
       "traits": [
         "BULKY"
       ]
