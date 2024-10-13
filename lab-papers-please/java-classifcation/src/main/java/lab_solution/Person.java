@@ -2,9 +2,9 @@ package lab_solution;
 
 public class Person {
     private int id;
-    private boolean humanoid;
+    private Boolean humanoid;
     private String planet;
-    private int age;
+    private Integer age;
     private String[] traits;
 
     //setters
@@ -12,7 +12,7 @@ public class Person {
         this.id = id;
     }
 
-    public void setHumanoid(boolean humanoid) {
+    public void setHumanoid(Boolean humanoid) {
         this.humanoid = humanoid;
     }
 
@@ -20,7 +20,7 @@ public class Person {
         this.planet = planet;
     }
 
-    public void setAge(int age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 
@@ -28,7 +28,7 @@ public class Person {
         this.traits = traits;
     }
 
-    void set(boolean humanoid, String planet, int age, String[] traits) {
+    void set(Boolean humanoid, String planet, Integer age, String[] traits) {
         this.humanoid = humanoid;
         this.planet = planet;
         this.age = age;
@@ -40,7 +40,7 @@ public class Person {
         return id;
     }
 
-    public boolean getHumanoid() {
+    public Boolean getHumanoid() {
         return humanoid;
     }
 
@@ -48,7 +48,7 @@ public class Person {
         return planet;
     }
 
-    public int getAge() {
+    public Integer getAge() {
         return age;
     }
 
@@ -70,5 +70,17 @@ public class Person {
             System.out.print("null");
         }
         System.out.println();
+    }
+
+    public boolean containsTrait(String[] traits, String traitToCheck) {
+        if (traits == null) {
+            return false; // Return false if traits are null
+        }
+        for (String trait : traits) {
+            if (trait.equals(traitToCheck)) {
+                return true;
+            }
+        }
+        return false;
     }
 }
