@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
         //using the read class and function to extract the data from the file
-        JsonNode data = ReadFile.readJson("C:\\Users\\user\\IdeaProjects\\OOP_Lab\\lab-papers-please\\java-classifcation\\src\\main\\resources\\input.json");
+        JsonNode data = ReadFile.readJson("C:\\Users\\user\\IdeaProjects\\OOP_Course\\lab_0\\java-classifcation\\src\\main\\resources\\input.json");
 
         Classification classification = new Classification();
 

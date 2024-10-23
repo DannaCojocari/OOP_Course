@@ -107,11 +107,11 @@ public class Classification {
 
     // writing classified data to JSON files
     public void writeOutput() throws IOException {
-        mapper.writeValue(new File("C:\\Users\\user\\IdeaProjects\\OOP_Lab\\lab-papers-please\\java-classifcation\\src\\main\\java\\lab_solution\\output\\starwars.json"), starWars);
-        mapper.writeValue(new File("C:\\Users\\user\\IdeaProjects\\OOP_Lab\\lab-papers-please\\java-classifcation\\src\\main\\java\\lab_solution\\output\\hitchhiker.json"), hitchhikers);
-        mapper.writeValue(new File("C:\\Users\\user\\IdeaProjects\\OOP_Lab\\lab-papers-please\\java-classifcation\\src\\main\\java\\lab_solution\\output\\rings.json"), rings);
-        mapper.writeValue(new File("C:\\Users\\user\\IdeaProjects\\OOP_Lab\\lab-papers-please\\java-classifcation\\src\\main\\java\\lab_solution\\output\\marvel.json"), marvel);
-        mapper.writeValue(new File("C:\\Users\\user\\IdeaProjects\\OOP_Lab\\lab-papers-please\\java-classifcation\\src\\main\\java\\lab_solution\\output\\unclassified.json"), unclassified);
+        mapper.writeValue(new File("C:\\Users\\user\\IdeaProjects\\OOP_Course\\lab_0\\java-classifcation\\src\\main\\java\\lab_solution\\output\\starwars.json"), starWars);
+        mapper.writeValue(new File("C:\\Users\\user\\IdeaProjects\\OOP_Course\\lab_0\\java-classifcation\\src\\main\\java\\lab_solution\\output\\hitchhiker.json"), hitchhikers);
+        mapper.writeValue(new File("C:\\Users\\user\\IdeaProjects\\OOP_Course\\lab_0\\java-classifcation\\src\\main\\java\\lab_solution\\output\\rings.json"), rings);
+        mapper.writeValue(new File("C:\\Users\\user\\IdeaProjects\\OOP_Course\\lab_0\\java-classifcation\\src\\main\\java\\lab_solution\\output\\marvel.json"), marvel);
+        mapper.writeValue(new File("C:\\Users\\user\\IdeaProjects\\OOP_Course\\lab_0\\java-classifcation\\src\\main\\java\\lab_solution\\output\\unclassified.json"), unclassified);
     }
 }
 

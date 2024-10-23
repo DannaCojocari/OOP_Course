@@ -1,1 +1,1 @@
-# OOP_Lab1
+# OOP_Course
