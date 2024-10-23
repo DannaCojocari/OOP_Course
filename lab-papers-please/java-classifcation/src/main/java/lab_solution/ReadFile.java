@@ -5,7 +5,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class ReadFile {
-    public static JsonNode read(String path) throws IOException
+    public static JsonNode readJson(String path) throws IOException
     {
         // ObjectMapper instance - JSON parsing
         ObjectMapper mapper = new ObjectMapper();
