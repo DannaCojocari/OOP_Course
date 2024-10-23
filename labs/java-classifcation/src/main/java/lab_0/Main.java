@@ -1,4 +1,4 @@
-package lab_solution;
+package lab_0;
 import com.fasterxml.jackson.databind.JsonNode;
 
 import java.io.IOException;
@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
         //using the read class and function to extract the data from the file
-        JsonNode data = ReadFile.read("C:\\Users\\user\\IdeaProjects\\OOP_Lab2\\lab-papers-please\\java-classifcation\\src\\main\\resources\\input.json");
+        JsonNode data = ReadFile.read("C:\\Users\\user\\Desktop\\OOP_Course\\labs\\java-classifcation\\src\\main\\resources\\input.json");
 
         Classification classification = new Classification();
 

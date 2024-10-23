@@ -1,4 +1,4 @@
-package lab_solution;
+package lab_0;
 import java.io.FileReader;
 import java.io.IOException;
 import com.fasterxml.jackson.databind.JsonNode;

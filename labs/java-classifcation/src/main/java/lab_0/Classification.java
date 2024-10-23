@@ -1,4 +1,4 @@
-package lab_solution;
+package lab_0;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
@@ -107,11 +107,11 @@ public class Classification {
 
     // writing classified data to JSON files
     public void writeOutput() throws IOException {
-        mapper.writeValue(new File("C:\\Users\\user\\IdeaProjects\\OOP_Lab2\\lab-papers-please\\java-classifcation\\src\\main\\java\\lab_solution\\output\\starwars.json"), starWars);
-        mapper.writeValue(new File("C:\\Users\\user\\IdeaProjects\\OOP_Lab2\\lab-papers-please\\java-classifcation\\src\\main\\java\\lab_solution\\output\\hitchhiker.json"), hitchhikers);
-        mapper.writeValue(new File("C:\\Users\\user\\IdeaProjects\\OOP_Lab2\\lab-papers-please\\java-classifcation\\src\\main\\java\\lab_solution\\output\\rings.json"), rings);
-        mapper.writeValue(new File("C:\\Users\\user\\IdeaProjects\\OOP_Lab2\\lab-papers-please\\java-classifcation\\src\\main\\java\\lab_solution\\output\\marvel.json"), marvel);
-        mapper.writeValue(new File("C:\\Users\\user\\IdeaProjects\\OOP_Lab2\\lab-papers-please\\java-classifcation\\src\\main\\java\\lab_solution\\output\\unclassified.json"), unclassified);
+        mapper.writeValue(new File("C:\\Users\\user\\Desktop\\OOP_Course\\labs\\java-classifcation\\src\\main\\java\\lab_0\\output\\starwars.json"), starWars);
+        mapper.writeValue(new File("C:\\Users\\user\\Desktop\\OOP_Course\\labs\\java-classifcation\\src\\main\\java\\lab_0\\output\\hitchhiker.json"), hitchhikers);
+        mapper.writeValue(new File("C:\\Users\\user\\Desktop\\OOP_Course\\labs\\java-classifcation\\src\\main\\java\\lab_0\\output\\rings.json"), rings);
+        mapper.writeValue(new File("C:\\Users\\user\\Desktop\\OOP_Course\\labs\\java-classifcation\\src\\main\\java\\lab_0\\output\\marvel.json"), marvel);
+        mapper.writeValue(new File("C:\\Users\\user\\Desktop\\OOP_Course\\labs\\java-classifcation\\src\\main\\java\\lab_0\\output\\unclassified.json"), unclassified);
     }
 }
 

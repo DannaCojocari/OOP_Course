@@ -1,4 +1,4 @@
-package lab_solution;
+package lab_0;
 
 public class Person {
     private int id;
