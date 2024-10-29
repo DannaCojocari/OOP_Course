@@ -1,6 +1,7 @@
 package lab_1.task2;
 
 import lab_0.ReadFile;
+
 import java.io.IOException;
 import java.nio.file.Paths;
 
@@ -83,14 +84,23 @@ public class TextData {
     }
 
     public static void main(String[] args) throws IOException {
-        TextData file = new TextData(args[0]);
 
-        System.out.println("Filename: " + file.getFilename());
-        System.out.println("Text: " + file.getText());
-        System.out.println("Nr. of vowels: " + file.getNumberOfVowels());
-        System.out.println("Nr. of consonants: " + file.getNumberOfConsonants());
-        System.out.println("Nr. of letters: " + file.getNumberOfLetters());
-        System.out.println("Nr. of sentences: " + file.getNumberOfSentences());
-        System.out.println("The longest word: " + file.getLongestWord());
+        for (String path : args) {
+            try {
+                TextData file = new TextData(path);
+
+                System.out.println();
+                System.out.println("Filename: " + file.getFilename());
+                System.out.println("Text: " + file.getText());
+                System.out.println("Nr. of vowels: " + file.getNumberOfVowels());
+                System.out.println("Nr. of consonants: " + file.getNumberOfConsonants());
+                System.out.println("Nr. of letters: " + file.getNumberOfLetters());
+                System.out.println("Nr. of sentences: " + file.getNumberOfSentences());
+                System.out.println("The longest word: " + file.getLongestWord());
+
+            } catch (IOException e) {
+                System.out.println("Error reading file: " + path + " - " + e.getMessage());
+            }
+        }
     }
 }
