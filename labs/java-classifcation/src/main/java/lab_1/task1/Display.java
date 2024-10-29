@@ -13,6 +13,10 @@ public class Display {
         this.model = model;
     }
 
+    public void getDisplay() {
+        System.out.println("Model: " + model + " Width: " + width + " Height: " + height + " Ppi: " + ppi);
+    }
+
     public void compareSize(Display m) {
         int area1 = this.width * this.height;
         int area2 = m.width * m.height;
@@ -20,7 +24,7 @@ public class Display {
         if (area1 > area2) {
             System.out.println(this.model + " is bigger than " + m.model + " with " + (area1 - area2) + "cm^2");
         } else if (area1 < area2) {
-            System.out.println(m.model + " is bigger than " + this.model + " with " + (area2 - area1) + "cm^2");
+            System.out.println(this.model + " is smaller than " + m.model + " with " + (area2 - area1) + "cm^2");
         } else {
             System.out.println(this.model + " is equal to " + m.model + " by size");
         }
@@ -30,7 +34,7 @@ public class Display {
         if (this.ppi > m.ppi) {
             System.out.println(this.model + " has a sharper monitor than " + m.model + " with " + (this.ppi - m.ppi) + " PPI");
         } else if (this.ppi < m.ppi) {
-            System.out.println(m.model + " has a sharper monitor than " + this.model + " with " + (m.ppi - this.ppi) + " PPI");
+            System.out.println(this.model + " has a  less sharper monitor than " + m.model + " with " + (m.ppi - this.ppi) + " PPI");
         } else {
             System.out.println(this.model + " and " + m.model + " have the same sharpness");
         }
