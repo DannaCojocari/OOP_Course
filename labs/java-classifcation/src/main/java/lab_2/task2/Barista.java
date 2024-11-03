@@ -1,4 +1,4 @@
-package lab_2.task1;
+package lab_2.task2;
 
 enum Intensity {
     LIGHT,
@@ -40,6 +40,12 @@ class Cappuccino extends Coffee {
     public Integer getMlOfMilk() {
         return mlOfMilk;
     }
+
+    @Override
+    public void printCoffeeDetails() {
+        super.printCoffeeDetails();
+        System.out.println(name + " milk: " + mlOfMilk + " ml");
+    }
 }
 
 class Americano extends Coffee {
@@ -54,6 +60,12 @@ class Americano extends Coffee {
     public Integer getMlOfWater() {
         return mlOfWater;
     }
+
+    @Override
+    public void printCoffeeDetails() {
+        super.printCoffeeDetails();
+        System.out.println(name + " water: " + mlOfWater + " ml");
+    }
 }
 
 class PumpkinSpiceLatte extends Cappuccino {
@@ -67,6 +79,12 @@ class PumpkinSpiceLatte extends Cappuccino {
 
     public Integer getMgOfPumpkinSpice() {
         return mgOfPumpkinSpice;
+    }
+
+    @Override
+    public void printCoffeeDetails() {
+        super.printCoffeeDetails();
+        System.out.println(name + " spice: " + mgOfPumpkinSpice + " mg");
     }
 }
 
@@ -90,5 +108,30 @@ class SyrupCappuccino extends Cappuccino {
 
     public SyrupType getSyrup() {
         return syrup;
+    }
+
+    @Override
+    public void printCoffeeDetails() {
+        super.printCoffeeDetails();
+        System.out.println(name + " syrup: " + syrup);
+    }
+}
+
+public class Barista {
+    public static void main(String[] args) {
+        Cappuccino cappuccino = new Cappuccino(Intensity.LIGHT, 50);
+        cappuccino.printCoffeeDetails();
+
+        System.out.println("\n");
+        PumpkinSpiceLatte latte = new PumpkinSpiceLatte(Intensity.NORMAL, 70, 5);
+        latte.printCoffeeDetails();
+
+        System.out.println("\n");
+        Americano americano = new Americano(Intensity.STRONG, 5);
+        americano.printCoffeeDetails();
+
+        System.out.println("\n");
+        SyrupCappuccino syrupCappuccino = new SyrupCappuccino(Intensity.LIGHT, 50, SyrupType.COCONUT);
+        syrupCappuccino.printCoffeeDetails();
     }
 }
