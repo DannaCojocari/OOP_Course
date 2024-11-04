@@ -1,4 +1,0 @@
-While competitors like Sololearn, Mimo, Enki, Encode, and Programming Hub offer structured
-learning paths, they often lack the personalized touch that sets our web app apart. Unlike these platforms,
-which provide predefined courses without much flexibility, our web app empowers users to customize their
-learning journey based on their individual skill levels and aspirations.
