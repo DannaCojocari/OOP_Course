@@ -7,7 +7,7 @@ public class RobotDinner implements Dineable{
         robot++;
     }
 
-    public Integer getRobot() {
+    public static Integer getRobot() {
         return robot;
     }
 

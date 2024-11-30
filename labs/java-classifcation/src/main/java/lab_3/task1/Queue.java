@@ -1,10 +1,10 @@
 package lab_3.task1;
 
-interface Queue<Car> {
-    void enqueue(Car car);
-    void dequeue();
-    Car peek();
-    boolean isEmpty();
-    int size();
-    void display();
+public interface Queue<Car> {
+    public void enqueue(Car car);
+    public void dequeue();
+    public Car peek();
+    public boolean isEmpty();
+    public int size();
+    public void display();
 }

@@ -7,7 +7,7 @@ public class PeopleDinner implements Dineable{
         people++;
     }
 
-    public Integer getPeople() {
+    public static Integer getPeople() {
         return people;
     }
 

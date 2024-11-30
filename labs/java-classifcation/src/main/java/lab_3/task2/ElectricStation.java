@@ -7,7 +7,7 @@ public class ElectricStation implements Refuelable{
         electricCar++;
     }
 
-    public Integer getElectricCar() {
+    public static Integer getElectricCar() {
         return electricCar;
     }
 
