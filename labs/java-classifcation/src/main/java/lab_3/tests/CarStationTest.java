@@ -37,20 +37,14 @@ public class CarStationTest {
         };
 
         for (Car car : cars) {
-            if ((car.getPassenger_type().equals(Car.PassengerType.PEOPLE)) && (car.getCar_type().equals(Car.CarType.ELECTRIC))) {
+            if ((car.getPassengers().equals(Car.PassengerType.PEOPLE)) && (car.getType().equals(Car.CarType.ELECTRIC))) {
                 stations[0].addCar(car);
-            } else if ((car.getPassenger_type().equals(Car.PassengerType.PEOPLE)) && (car.getCar_type().equals(Car.CarType.GAS))) {
+            } else if ((car.getPassengers().equals(Car.PassengerType.PEOPLE)) && (car.getType().equals(Car.CarType.GAS))) {
                 stations[1].addCar(car);
-            } else if ((car.getPassenger_type().equals(Car.PassengerType.ROBOTS)) && (car.getCar_type().equals(Car.CarType.ELECTRIC))) {
+            } else if ((car.getPassengers().equals(Car.PassengerType.ROBOTS)) && (car.getType().equals(Car.CarType.ELECTRIC))) {
                 stations[2].addCar(car);
             } else {
                 stations[3].addCar(car);
-            }
-        }
-
-        for (CarStation station : stations) {
-            while (!station.queueIsEmpty()) {
-                station.serveCars();
             }
         }
     }

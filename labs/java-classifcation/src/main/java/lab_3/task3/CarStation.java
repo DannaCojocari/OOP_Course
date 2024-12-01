@@ -19,16 +19,17 @@ public class CarStation {
         car = queue.peek();
 
         if (car.getIsDining()) {
-            diningService.serveDinner(car.getCarId());
+            diningService.serveDinner(car.getId());
         }
 
-        refuelingService.refuel(car.getCarId());
+        refuelingService.refuel(car.getId());
 
         queue.dequeue();
     }
 
     public void addCar(Car car) {
         queue.enqueue(car);
+        serveCars();
     }
 
     public Integer getNrCars() {
@@ -53,5 +54,17 @@ public class CarStation {
 
     public Boolean queueIsEmpty() {
         return queue.isEmpty();
+    }
+
+    public Refuelable getRefuelingService() {
+        return refuelingService;
+    }
+
+    public Dineable getDiningService() {
+        return diningService;
+    }
+
+    public Queue<Car> getQueue() {
+        return queue;
     }
 }

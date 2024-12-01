@@ -12,37 +12,61 @@ public class Car {
     }
 
 
-    private String carId;
-    private CarType car_type;
-    private PassengerType passenger_type;
+    private String id;
+    private CarType type;
+    private PassengerType passengers;
     private Boolean isDining;
-    private Integer consumptionRange; //between 10 and 50
+    private Integer consumption; //between 10 and 50
 
-    public Car(String carId, CarType car_type, PassengerType passenger_type, Boolean isDining, Integer consumptionRange) {
-        this.carId = carId;
-        this.car_type = car_type;
-        this.passenger_type = passenger_type;
+    public Car() {
+
+    }
+
+    public Car(String id, CarType type, PassengerType passengers, Boolean isDining, Integer consumption) {
+        this.id = id;
+        this.type = type;
+        this.passengers = passengers;
         this.isDining = isDining;
-        this.consumptionRange = consumptionRange;
+        this.consumption = consumption;
     }
 
-    public String getCarId() {
-        return carId;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public CarType getCar_type() {
-        return car_type;
+    public void setType(CarType type) {
+        this.type = type;
     }
 
-    public PassengerType getPassenger_type() {
-        return passenger_type;
+    public void setPassengers(PassengerType passengers) {
+        this.passengers = passengers;
+    }
+
+    public void setDining(Boolean dining) {
+        isDining = dining;
+    }
+
+    public void setConsumption(Integer consumption) {
+        this.consumption = consumption;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public CarType getType() {
+        return type;
+    }
+
+    public PassengerType getPassengers() {
+        return passengers;
     }
 
     public Boolean getIsDining() {
         return isDining;
     }
 
-    public Integer getConsumptionRange() {
-        return consumptionRange;
+    public Integer getConsumption() {
+        return consumption;
     }
 }
