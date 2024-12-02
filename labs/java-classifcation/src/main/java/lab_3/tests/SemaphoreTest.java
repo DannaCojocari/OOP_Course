@@ -1,5 +1,6 @@
 package lab_3.tests;
 
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lab_3.task1.ArrayQueue;
 import lab_3.task1.CircularQueue;
@@ -15,6 +16,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
+import java.util.List;
 
 public class SemaphoreTest {
 
@@ -40,10 +42,11 @@ public class SemaphoreTest {
             """;
 
         ObjectMapper mapper = new ObjectMapper();
-        Car[] cars = mapper.readValue(jsonString, Car[].class);
+        List<Car> cars = mapper.readValue(jsonString, new TypeReference<List<Car>>() {});
 
         Semaphore semaphore = new Semaphore(stations, cars);
         semaphore.guideCarToStation();
+        //semaphore.serveCars();
 
         Assertions.assertEquals(2, stations[0].getNrPassengers()); //nr total people dining is 2
         Assertions.assertEquals(2, stations[1].getNrPassengers()); //nr total people dining is 2
@@ -82,10 +85,11 @@ public class SemaphoreTest {
                 """;
 
         ObjectMapper mapper = new ObjectMapper();
-        Car[] cars =mapper.readValue(jsonString, Car[].class);
+        List<Car> cars = mapper.readValue(jsonString, new TypeReference<List<Car>>() {});
 
         Semaphore semaphore = new Semaphore(stations, cars);
         semaphore.guideCarToStation();
+        //semaphore.serveCars();
 
         Assertions.assertEquals(7,semaphore.getTypeCar(Car.CarType.ELECTRIC)); //nr total electric cars
         Assertions.assertEquals(3,semaphore.getTypeCar(Car.CarType.GAS)); //nr total gas cars
