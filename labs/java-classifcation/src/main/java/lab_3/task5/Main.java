@@ -21,6 +21,7 @@ import java.util.concurrent.TimeUnit;
 public class Main {
 
     private static List<Car> cars;
+    private static List<Car> carsLog = new ArrayList<>();
     private static CarStation[] stations;
     private static int fileIndex = 0;
     private static Car car = null;
@@ -52,6 +53,7 @@ public class Main {
                         car = mapper.readValue(file, Car.class);
 
                         cars.add(car);
+                        carsLog.add(car);
                         semaphore.addCar(car);
 
                         System.out.println("File: " + file.getName());
@@ -60,6 +62,8 @@ public class Main {
                         System.out.println("Error reading file: " + file.getName());
                         e.printStackTrace();
                     }
+                } else {
+                    task1Completed = true;
                 }
             }
         }
@@ -77,6 +81,32 @@ public class Main {
         public void run() {
             semaphore.guideCarToStation();
             System.out.println();
+
+            if (task1Completed) {
+                try {
+                    Thread.sleep(5000);
+                    task2Completed = true;
+
+
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    static class Task3 extends Thread {
+        private final Semaphore semaphore;
+
+        public Task3(Semaphore semaphore) {
+            this.semaphore = semaphore;
+        }
+
+        @Override
+        public void run() {
+            if (task1Completed && task2Completed) {
+                System.out.println(semaphore.Statistics().toString());
+            }
         }
     }
 
@@ -93,22 +123,15 @@ public class Main {
         Semaphore semaphore = new Semaphore(stations);
 
         // Create a ScheduledExecutorService with a pool of threads
-        ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(2);
+        ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(3);
 
         Task1 task1 = new Task1(semaphore);
         Task2 task2 = new Task2(semaphore);
+        Task3 task3 = new Task3(semaphore);
 
         scheduler.scheduleAtFixedRate(task1, 0, 2, TimeUnit.SECONDS);
         scheduler.scheduleAtFixedRate(task2, 3, 5, TimeUnit.SECONDS);
+        scheduler.scheduleAtFixedRate(task3, 4, 6, TimeUnit.SECONDS);
 
-        try {
-            Thread.sleep(80000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-        System.out.println(semaphore.Statistics().toString());
-
-        scheduler.shutdown();
     }
 }
